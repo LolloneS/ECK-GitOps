@@ -2,6 +2,8 @@ apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
 metadata:
   name: quickstart
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   version: 8.15.1
   count: 1
